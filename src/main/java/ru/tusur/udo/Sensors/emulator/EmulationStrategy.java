@@ -1,5 +1,6 @@
 package ru.tusur.udo.Sensors.emulator;
 
 public interface EmulationStrategy {
-	void doEmulate(FakeSensor fakeSensor);
+	void doEmulate(SensorSetter fakeSensor);
+	void setTicksCounter(int counter);
 }

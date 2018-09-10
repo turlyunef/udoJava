@@ -2,16 +2,13 @@ package ru.tusur.udo.Sensors.emulator;
 
 import ru.tusur.udo.Sensors.core.Sensor;
 
-public class FakeSensor implements Sensor {
+public class FakeSensor implements Sensor,SensorSetter {
 	private int status;
 	private String imei;
 	private int value;
 	private int type;
 	
 	private EmulationStrategy emulationStrategy;
-	
-	
-	
 	
 	public void setEmulationStrategy(EmulationStrategy emulationStrategy) {
 		this.emulationStrategy = emulationStrategy;
@@ -48,6 +45,11 @@ public class FakeSensor implements Sensor {
 	public void setType(int type) {
 		this.type = type;
 	}
+	
+	public void emulate() {
+		this.emulationStrategy.doEmulate(this);
+	}
+
 	
 	
 	
