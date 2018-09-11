@@ -9,7 +9,7 @@ public interface Sensor {
 
 	String getImei();
 
-	int getValue();
+	double getValue();
 
 	int getType();
 }

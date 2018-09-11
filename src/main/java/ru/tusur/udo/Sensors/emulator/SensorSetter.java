@@ -5,6 +5,6 @@ package ru.tusur.udo.Sensors.emulator;
  * Интерфейс датчиков для возможности установки стратеги поведения
  */
 public interface SensorSetter {
-	void setValue(int value);
+	void setValue(double value);
 	}
 

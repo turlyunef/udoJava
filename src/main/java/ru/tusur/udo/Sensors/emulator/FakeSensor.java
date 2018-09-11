@@ -5,7 +5,7 @@ import ru.tusur.udo.Sensors.core.Sensor;
 public class FakeSensor implements Sensor,SensorSetter {
 	private int status;
 	private String imei;
-	private int value;
+	private double value;
 	private int type;
 	
 	private EmulationStrategy emulationStrategy;
@@ -13,19 +13,19 @@ public class FakeSensor implements Sensor,SensorSetter {
 	public void setEmulationStrategy(EmulationStrategy emulationStrategy) {
 		this.emulationStrategy = emulationStrategy;
 	}
-
+	@Override
 	public int getStatus() {
 		return this.status;
 	}
-
+	@Override
 	public String getImei() {
 		return this.imei;
 	}
-
-	public int getValue() {
+	@Override
+	public double getValue() {
 		return this.value;
 	}
-
+	@Override
 	public int getType() {
 		return this.type;
 	}
@@ -37,11 +37,11 @@ public class FakeSensor implements Sensor,SensorSetter {
 	public void setImei(String imei) {
 		this.imei = imei;
 	}
-
-	public void setValue(int value) {
+	@Override
+	public void setValue(double value) {
 		this.value = value;
 	}
-
+	
 	public void setType(int type) {
 		this.type = type;
 	}

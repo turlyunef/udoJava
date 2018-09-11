@@ -20,14 +20,14 @@ public class DStrategyTest extends TestCase {
 	public void testDStrategy() {
 		int TICKS_COUNT = 5;
 		this.strategy.setTicksCounter(TICKS_COUNT);
-		int value = 0;
-		for (int i = 1; i < 10000; i++) {
+		double value = 0;
+		for (int i = 1; i < 1000; i++) {
 			this.sensor.emulate();
 			if (i % TICKS_COUNT == 0) {
 				if (value == 1) {
 					value = 0;
 				} else {
-					value = 1;
+					value = 1.0;
 				}
 			}
 			assertEquals(this.sensor.getValue(), value);

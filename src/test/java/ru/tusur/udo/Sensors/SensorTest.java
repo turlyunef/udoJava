@@ -14,8 +14,8 @@ public class SensorTest extends TestCase {
 			return "super IMEI";
 		}
 
-		public int getValue() {
-			return 1;
+		public double getValue() {
+			return 1.0;
 		}
 
 		public int getType() {
@@ -28,7 +28,7 @@ public class SensorTest extends TestCase {
 		Sensor s = new SensorImpl();
 		assertEquals(s.getImei(), "super IMEI");
 		assertEquals(s.getStatus(), 22);
-		assertEquals(s.getValue(), 1);
+		assertEquals(s.getValue(), 1.0);
 		assertEquals(s.getType(), 2);
 		assertTrue(true);
 	}
