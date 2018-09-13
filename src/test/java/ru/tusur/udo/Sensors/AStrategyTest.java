@@ -31,7 +31,7 @@ public class AStrategyTest extends TestCase {
 
 		this.strategy.setTicksCounter(TICKS_COUNT);
 		this.strategy.setMinMax(MIN, MAX);
-		double value = 0;
+		double value = MIN;
 		for (int i = 1; i < 10000; i++) {
 			this.fakeSensor.emulate();
 			if (i % TICKS_COUNT == 0) {

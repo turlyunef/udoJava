@@ -20,17 +20,19 @@ public class AStrategy implements EmulationStrategy {
 	}
 
 	@Override
-	public void doEmulate(SensorSetter fakeSensor) {
+	public void doEmulate(SensorSetter sensor) {
 		double DELTA = ((max - min) / counter);
 		if (tick % counter == 0) {
-			this.tick = 1;
+			
 			if (value == this.min) {
 				value += DELTA;
 				UP = true;
+				this.tick = 1;
 
 			} else {
 				value -= DELTA;
 				UP = false;
+				this.tick++;
 
 			}
 
@@ -43,7 +45,7 @@ public class AStrategy implements EmulationStrategy {
 			}
 
 		}
-
+		sensor.setValue(this.value);
 	}
 
 	@Override
