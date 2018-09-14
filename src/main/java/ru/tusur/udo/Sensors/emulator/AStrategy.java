@@ -14,6 +14,7 @@ public class AStrategy implements EmulationStrategy {
 	private static Logger log = LoggerFactory.getLogger(AStrategy.class);
 
 	public AStrategy() {
+		log.info("Strategy AStrategy created from bean of ApplicationContext");
 		this.value = 0;
 		this.tick = 1;
 
@@ -52,11 +53,16 @@ public class AStrategy implements EmulationStrategy {
 	public void setTicksCounter(int counter) {
 		this.counter = counter;
 	}
-
 	@Override
-	public void setMinMax(int min, int max) {
-		this.max = max;
+	public void setMin(int min) {
 		this.min = min;
 	}
+	
+	@Override
+	public void setMax(int max) {
+		this.max = max;
+	}
+
+	
 
 }

@@ -30,7 +30,8 @@ public class AStrategyTest extends TestCase {
 		double DELTA = (MAX - MIN) / TICKS_COUNT;
 
 		this.strategy.setTicksCounter(TICKS_COUNT);
-		this.strategy.setMinMax(MIN, MAX);
+		this.strategy.setMin(MIN);
+		this.strategy.setMax(MAX);
 		double value = MIN;
 		for (int i = 1; i < 10000; i++) {
 			this.fakeSensor.emulate();
@@ -64,7 +65,8 @@ public class AStrategyTest extends TestCase {
 		double DELTA = (MAX - MIN) / TICKS_COUNT;
 
 		this.strategy.setTicksCounter(TICKS_COUNT);
-		this.strategy.setMinMax(MIN, MAX);
+		this.strategy.setMin(MIN);
+		this.strategy.setMax(MAX);
 		double value = 0;
 		for (int i = 1; i < 10000; i++) {
 			this.fakeSensor.emulate();

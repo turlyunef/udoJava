@@ -1,5 +1,8 @@
 package ru.tusur.udo.Sensors.emulator;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import ru.tusur.udo.Sensors.core.Sensor;
 
 public class FakeSensor implements Sensor,SensorSetter {
@@ -9,6 +12,7 @@ public class FakeSensor implements Sensor,SensorSetter {
 	private int type;
 	
 	private EmulationStrategy emulationStrategy;
+	private static Logger log = LoggerFactory.getLogger(FakeSensor.class);
 	
 	public void setEmulationStrategy(EmulationStrategy emulationStrategy) {
 		this.emulationStrategy = emulationStrategy;

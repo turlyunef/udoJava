@@ -17,7 +17,7 @@ public class DStrategy implements EmulationStrategy {
 	private static Logger log = LoggerFactory.getLogger(DStrategy.class);
 
 	public DStrategy() {
-		log.info("Creating DStrategy from bean of ApplicationContext");
+		log.info("Strategy DStrategy created from bean of ApplicationContext");
 		this.value = 0;
 		this.tick = 1;
 
@@ -40,11 +40,17 @@ public class DStrategy implements EmulationStrategy {
 	public void setTicksCounter(int counter) {
 		this.counter = counter;
 	}
-
+	
 	@Override
-	public void setMinMax(int min, int max) {
-		this.max = max;
+	public void setMin(int min) {
 		this.min = min;
 	}
+	
+	@Override
+	public void setMax(int max) {
+		this.max = max;
+	}
+
+	
 
 }
