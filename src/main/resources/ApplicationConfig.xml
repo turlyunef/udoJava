@@ -56,8 +56,6 @@
 		</constructor-arg>
 	</bean>
 
-	<bean id="sensorRuntime" class="ru.tusur.udo.Sensors.emulator.EmulationRuntime">
-	<property name = "sensors" ref = "sensors" />
-	</bean>
+	
 
 </beans>
