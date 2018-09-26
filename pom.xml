@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>ru.tusur.udo</groupId>
-	<artifactId>Sensors</artifactId>
+	<artifactId>SensorMonitoring</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>pom</packaging>
 
-	<name>Sensors</name>
+	<name>SensorMonitoring</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>
@@ -19,6 +19,10 @@
 		<spring.version>5.0.6.RELEASE</spring.version>
 	</properties>
 
+	<modules>
+	<module>Frontend</module>
+	<module>Sensors</module>
+	</modules>
 
 	<dependencies>
 		<dependency>
