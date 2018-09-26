@@ -37,11 +37,13 @@ public class App {
 		}*/
 		
 	//Создание Bean через ApplicationConfig.class
-		//ApplicationContext ctx2 = new AnnotationConfigApplicationContext(ApplicationConfig.class);
+		ApplicationContext ctx2 = new AnnotationConfigApplicationContext(ApplicationConfig.class);
 		
-		//SensorRuntime s = (SensorRuntime) ctx2.getBean("sensorRuntime");
+		SensorRuntime s = (SensorRuntime) ctx2.getBean("sensorRuntime");
 		
-		
+		while(true) {
+			
+		}
 		
 		
 	}

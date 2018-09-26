@@ -4,6 +4,7 @@ import org.apache.camel.Exchange;
 import org.apache.camel.Processor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 
@@ -11,10 +12,12 @@ import org.springframework.stereotype.Component;
 
 public class SensorRuntimeProcessor implements Processor{
 	private static Logger log = LoggerFactory.getLogger(SensorRuntimeProcessor.class);
-
+@Autowired
+SensorRuntime sensorRuntime;
+	
 	@Override
 	public void process(Exchange exchange) throws Exception {
-		// TODO Auto-generated method stub
+		exchange.getOut().setBody(this.sensorRuntime.getSensor());
 		log.info("ПРОЦЕСС SensorRuntimeProcessor");
 	}
 
