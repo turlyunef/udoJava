@@ -17,7 +17,7 @@ public class DStrategy implements EmulationStrategy {
 	private static Logger log = LoggerFactory.getLogger(DStrategy.class);
 
 	public DStrategy() {
-		log.info("Strategy DStrategy created from bean of ApplicationContext");
+		//log.info("Strategy DStrategy created from bean of ApplicationContext");
 		this.value = 0;
 		this.tick = 1;
 

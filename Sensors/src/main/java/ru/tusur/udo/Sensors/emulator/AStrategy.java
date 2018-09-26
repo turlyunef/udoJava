@@ -14,7 +14,7 @@ public class AStrategy implements EmulationStrategy {
 	private static Logger log = LoggerFactory.getLogger(AStrategy.class);
 
 	public AStrategy() {
-		log.info("Strategy AStrategy created from bean of ApplicationContext");
+		//log.info("Strategy AStrategy created from bean of ApplicationContext");
 		this.value = 0;
 		this.tick = 1;
 
