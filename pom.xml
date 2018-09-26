@@ -20,10 +20,10 @@
 	</properties>
 
 	<modules>
-	<module>Frontend</module>
-	<module>Sensors</module>
+		<module>Frontend</module>
+		<module>Sensors</module>
 	</modules>
-
+<dependencyManagement>
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
@@ -37,9 +37,10 @@
 			<version>${slf4jVersion}</version>
 		</dependency>
 		<dependency>
-		<groupId>org.springframework</groupId>
+			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
 	</dependencies>
+</dependencyManagement>
 </project>

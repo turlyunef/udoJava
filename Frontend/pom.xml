@@ -12,7 +12,7 @@
 
 	<parent>
 		<groupId>ru.tusur.udo</groupId>
-		<artifactId>Sensors</artifactId>
+		<artifactId>SensorMonitoring</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 
