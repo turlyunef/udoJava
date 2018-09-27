@@ -7,14 +7,12 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-
 @Component
-
-public class SensorRuntimeProcessor implements Processor{
+public class SensorRuntimeProcessor implements Processor {
 	private static Logger log = LoggerFactory.getLogger(SensorRuntimeProcessor.class);
-@Autowired
-SensorRuntime sensorRuntime;
-	
+	@Autowired
+	SensorRuntime sensorRuntime;
+
 	@Override
 	public void process(Exchange exchange) throws Exception {
 		exchange.getOut().setBody(this.sensorRuntime.getSensor());
