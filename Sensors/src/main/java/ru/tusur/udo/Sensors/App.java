@@ -24,10 +24,11 @@ public class App {
 		log.info("Start programm");
 		
 		//Создание Bean через xml
+		/**
 		ApplicationContext ctx = 
 				new ClassPathXmlApplicationContext("ApplicationConfig.xml");
 		
-		/**
+		
 		SensorRuntime emul = (SensorRuntime) ctx.getBean("sensorRuntime");
 		List<Sensor> sensorList = emul.getSensor();
 		

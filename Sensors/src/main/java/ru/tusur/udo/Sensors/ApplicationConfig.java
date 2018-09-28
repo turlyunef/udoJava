@@ -21,7 +21,7 @@ import ru.tusur.udo.Sensors.emulator.EmulationRuntime;
 @ComponentScan(basePackages = {"ru.tusur.udo.sensors.core"})
 public class ApplicationConfig {
 	private static Logger log = LoggerFactory.getLogger(ApplicationConfig.class);
-/**
+
 	@Bean
 	public ClassPathXmlApplicationContext xmlContext() {
 		log.info("SUPER CREATE xmlContext");
@@ -36,7 +36,7 @@ public class ApplicationConfig {
 		log.info("SUPER CREATE sensorRuntime");
 		s.start();
 		return s;
-	}*/
+	}
 	@Bean
 	SensorRouters sensorRoutes() {
 		return new SensorRouters();
