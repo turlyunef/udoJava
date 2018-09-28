@@ -6,6 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 //import org.springframework.scheduling.annotation.EnableScheduling;
 //import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.beans.factory.annotation.Value;
 
 import ru.tusur.udo.Sensors.App;
 import ru.tusur.udo.Sensors.core.Sensor;
@@ -16,6 +17,9 @@ public class EmulationRuntime extends Thread implements SensorRuntime {
 	private int counter = 0;
 	private static Logger log = LoggerFactory.getLogger(App.class);
 	private List<Sensor> sensors;
+	
+	@Value("${runtime.interval}")
+	private int runtimeInterval;
 	
 	public void setSensors(List<Sensor> sensors) {
 		this.sensors = sensors;
@@ -34,7 +38,7 @@ public class EmulationRuntime extends Thread implements SensorRuntime {
 		while(true) {
 			this.emulate();
 			try {
-				sleep(1000);
+				sleep(runtimeInterval);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
@@ -48,7 +52,7 @@ public class EmulationRuntime extends Thread implements SensorRuntime {
 			if (sensor instanceof FakeSensor) {
 				FakeSensor s = (FakeSensor) sensor;
 				s.emulate();
-				log.info(s.getImei()+"="+s.getValue());
+				log.info(s.getImei()+"="+s.getValue()+" runtimeInterval= "+runtimeInterval);
 			}
 		});
 	}
