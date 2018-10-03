@@ -1,10 +1,12 @@
 package ru.tusur.udo.Beckend.EJBS;
 
+import javax.ejb.Stateless;
 import javax.inject.Inject;
 import javax.inject.Named;
 import org.apache.camel.Processor;
 import org.apache.camel.builder.RouteBuilder;
 
+@Stateless
 public class SensorRoutes extends RouteBuilder {
 	@Inject
 	@Named("sensorDBProcessor")
